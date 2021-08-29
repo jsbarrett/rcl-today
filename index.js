@@ -1,5 +1,8 @@
 (function () {
   const todaysDate = new Date()
+
+  if (todaysDate.getDay() === 0) return alert('today is Sunday ... no extra readings')
+
   todaysDate.setHours(0)
   todaysDate.setMinutes(0)
   todaysDate.setSeconds(0)
