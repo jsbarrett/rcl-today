@@ -19,14 +19,16 @@
   document.getElementById('app').innerHTML = `
     <div
       style="
+        font-family: Arial;
+        text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        min-height: 90vh;
+        min-height: 80vh;
       ">
-      <h1>${dateString}</h1>
-      <h2>${passages}</h2>
+      <h1>${dateString.replace(/^\w+, /g, '<br>')}</h1>
+      <h2>${passages.replace(/; /g, '<br>')}</h2>
     </div>
   `
 })()
